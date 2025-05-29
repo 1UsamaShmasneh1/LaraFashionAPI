@@ -1,0 +1,6 @@
+@LaraFashionAPI_HostAddress = http://localhost:5042
+
+GET {{LaraFashionAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
