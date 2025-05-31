@@ -30,7 +30,7 @@ namespace LaraFashionAPI.Google
 
             using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
             {
-                var credential = GoogleCredential.FromStream(stream)
+                 sheetCredential = GoogleCredential.FromStream(stream)
                     .CreateScoped(SheetScopes);
             }
         }
