@@ -3,6 +3,7 @@ using Google.Apis.Drive.v3;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Util.Store;
+using System.IO;
 
 namespace LaraFashionAPI.Google
 {
@@ -18,10 +19,12 @@ namespace LaraFashionAPI.Google
 
         private void SetSheetCredential()
         {
-            using (var stream = new FileStream(@"secret.json", FileMode.Open, FileAccess.Read))
-            {
-                sheetCredential = GoogleCredential.FromStream(stream).CreateScoped(SheetScopes);
-            }
+            //using (var stream = new FileStream(@"secret.json", FileMode.Open, FileAccess.Read))
+            //{
+            //    sheetCredential = GoogleCredential.FromStream(stream).CreateScoped(SheetScopes);
+            //}
+
+            sheetCredential = GoogleCredential.FromFile("secret.json").CreateScoped(SheetScopes);
         }
 
         private void SetDriveCredential()
