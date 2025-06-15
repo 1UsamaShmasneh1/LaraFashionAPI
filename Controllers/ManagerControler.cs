@@ -1,4 +1,5 @@
-﻿using LaraFashionAPI.Google;
+﻿using LaraFashionAPI.Data;
+using LaraFashionAPI.Google;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,7 @@ namespace LaraFashionAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult AddProduct([FromBody] Product product)
         {
             _sheetManagement.UpdateSheet("Products!A2", "hi");
             return Ok();

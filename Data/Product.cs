@@ -8,7 +8,7 @@
 
         public string? Category { get; set; }
 
-        public string? Sizes { get; set; }
+        public List<SizeModel>? Sizes { get; set; }
 
         public string? PictureName { get; set; }
     }
