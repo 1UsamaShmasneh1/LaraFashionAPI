@@ -22,12 +22,11 @@ namespace LaraFashionAPI.Google
             Console.WriteLine("File exists: " + File.Exists("secret.json"));
             using (var stream = new FileStream(@"secret.json", FileMode.Open, FileAccess.Read))
             {
-<<<<<<< HEAD
+
                 sheetCredential = GoogleCredential.FromStream(stream).CreateScoped(SheetScopes);
-=======
+
                  sheetCredential = GoogleCredential.FromStream(stream)
                     .CreateScoped(SheetScopes);
->>>>>>> b66a79f (init)
             }
 
             //var base64 = Environment.GetEnvironmentVariable("secret_base64");
