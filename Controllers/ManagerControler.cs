@@ -19,7 +19,8 @@ namespace LaraFashionAPI.Controllers
         [HttpPost]
         public IActionResult AddProduct([FromBody] Product product)
         {
-            _sheetManagement.UpdateSheet("Products!A2", "hi");
+            //_sheetManagement.UpdateSheet("Products!A2", "hi");
+            _sheetManagement.AddProductToSheet(product);
             return Ok();
         }
     }

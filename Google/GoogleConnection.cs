@@ -37,7 +37,7 @@ namespace LaraFashionAPI.Google
 
         private void SetDriveCredential()
         {
-            using (var stream = new FileStream(@"secret3.json", FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream(@"secret.json", FileMode.Open, FileAccess.Read))
             {
 
                 driveCredential = GoogleWebAuthorizationBroker.AuthorizeAsync(
