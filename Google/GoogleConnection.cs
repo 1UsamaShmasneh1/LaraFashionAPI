@@ -19,14 +19,10 @@ namespace LaraFashionAPI.Google
 
         private void SetSheetCredential()
         {
-            Console.WriteLine("File exists: " + File.Exists("secret.json"));
+
             using (var stream = new FileStream(@"secret.json", FileMode.Open, FileAccess.Read))
             {
-
                 sheetCredential = GoogleCredential.FromStream(stream).CreateScoped(SheetScopes);
-
-                 sheetCredential = GoogleCredential.FromStream(stream)
-                    .CreateScoped(SheetScopes);
             }
 
             //var base64 = Environment.GetEnvironmentVariable("secret_base64");
